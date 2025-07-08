@@ -6,16 +6,13 @@ function calculateFlames() {
     const name1 = name1Input.value.trim();
     const name2 = name2Input.value.trim();
   
-    // Clear previous error
     errorMsg.style.display = "none";
     errorMsg.innerText = "";
   
-    // Validation
     if (name1 === "" || name2 === "") {
       errorMsg.innerText = "Please enter both names ❤️";
       errorMsg.style.display = "block";
   
-      // Shake input for effect
       if (name1 === "") shakeInput(name1Input);
       if (name2 === "") shakeInput(name2Input);
   
@@ -25,7 +22,6 @@ function calculateFlames() {
       return;
     }
   
-    // Proceed with flames calculation
     let clean1 = name1.toLowerCase().replace(/ /g, '');
     let clean2 = name2.toLowerCase().replace(/ /g, '');
   
@@ -127,13 +123,11 @@ const svgMap = {
     svgContainer.style.color = color;
     resultTextElem.style.color = color;
   
-    // Reset styles
     svgContainer.style.opacity = 0;
     svgContainer.style.transform = "scale(0.8)";
     resultTextElem.style.opacity = 0;
     resultTextElem.style.transform = "scale(0.8)";
   
-    // Animate SVG icon
     anime({
       targets: svgContainer,
       opacity: [0, 1],
@@ -142,7 +136,6 @@ const svgMap = {
       easing: 'easeOutBack'
     });
   
-    // Animate text with a small delay
     anime({
       targets: resultTextElem,
       opacity: [0, 1],

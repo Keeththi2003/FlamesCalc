@@ -4,18 +4,23 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
     text-align: center;
-    padding: 50px;
-    height: 100vh;
+    padding: 50px 20px 35px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
-    overflow: hidden;
 }
 
 .container {
@@ -85,6 +90,8 @@ button:hover {
     font-size: 70px;
     opacity: 0;
     transform: scale(0.8);
+    margin-top: 10px;
+
 }
 
 #result {
@@ -94,6 +101,7 @@ button:hover {
     font-weight: 800;
     opacity: 0;
     transform: scale(0.8);
+
 }
 
 #error-msg {
@@ -105,14 +113,14 @@ button:hover {
 
 
 footer {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 15px;
+    margin-top: auto;
+    margin-bottom: 0;
     font-size: 15px;
     color: #391aea;
     opacity: 0.8;
     animation: fadeIn 2s ease-in forwards;
 }
+
 
 @keyframes fadeIn {
     0% {
