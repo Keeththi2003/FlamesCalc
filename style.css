@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     height: 100%;
     overflow-x: hidden;
 }
@@ -113,7 +114,8 @@ button:hover {
 
 
 footer {
-    margin-top: auto;
+    position: absolute;
+    bottom: 20px;
     margin-bottom: 0;
     font-size: 15px;
     color: #391aea;
