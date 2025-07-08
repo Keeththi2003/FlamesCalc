@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fbc2eb 0%, #a6c1ee 100%);
+    text-align: center;
+    padding: 50px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px 40px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    animation: slideUpFade 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(80px);
+}
+
+@keyframes slideUpFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input {
+    padding: 12px;
+    margin: 15px 0;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #6c5ce7;
+    box-shadow: 0 0 5px #6c5ce7;
+}
+
+h1 {
+    color: #6c5ce7;
+    margin-bottom: 10px;
+}
+
+h1 span {
+    color: #d63072;
+}
+
+button {
+    padding: 12px 25px;
+    background-color: #d63072;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+#result-svg {
+    margin: auto;
+    width: 80px;
+    font-size: 70px;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+#result {
+    font-weight: 900;
+    margin-top: 10px;
+    font-size: 28px;
+    font-weight: 800;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+#error-msg {
+    color: #d63031;
+    margin-top: 10px;
+    font-weight: 500;
+    display: none;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #391aea;
+    opacity: 0.8;
+    animation: fadeIn 2s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+}
+
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+
+    20% {
+        transform: translateX(-5px);
+    }
+
+    40% {
+        transform: translateX(5px);
+    }
+
+    60% {
+        transform: translateX(-5px);
+    }
+
+    80% {
+        transform: translateX(5px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+input.shake {
+    animation: shake 0.4s;
+    border-color: #d63031;
+}
